@@ -1,0 +1,137 @@
+/* Questão 1. Qual a relação que coesão possui com as responsabilidades de uma classe?
+R: Coesão refere-se à medida em que as responsabilidades de uma classe ou módulo estão relacionadas e agrupadas de maneira lógica.
+ Quanto maior a coesão, mais focado e específico é o propósito do componente. 
+
+Questão 2.
+
+Questão 3.
+Resolução:
+
+// Classe Conta
+public class Conta {
+    private String numeroConta;
+    private double saldo;
+
+    // Construtor, getters e setters
+
+    public void atualizarSaldo() {
+        // Lógica para atualizar o saldo da conta
+    }
+}
+
+// Classe Compra
+public class Compra {
+    private double valorCompra;
+
+    // Construtor, getters e setters
+
+    public void realizarCompra() {
+        // Lógica para efetuar a compra
+    }
+}
+
+// Classe Cliente
+public class Cliente {
+    private int id;
+    private String nome;
+    private String endereco;
+    private Conta conta;
+    private List<Compra> compras; // Pode ser uma lista de compras
+
+    // Construtor, getters e setters
+
+    public void exibirInformacoes() {
+        // Lógica para exibir informações do cliente
+    }
+
+    public void adicionarCompra(Compra compra) {
+        // Lógica para adicionar uma compra à lista de compras do cliente
+    }
+}
+
+
+Questão 4.
+Resolução
+
+import java.util.Arrays;
+
+// Classe para operações de ordenação
+public class Ordenacao {
+    public void ordenar(int[] array) {
+        Arrays.sort(array);
+    }
+
+    public void embaralhar(int[] array) {
+        // Lógica de embaralhar o array
+    }
+}
+
+// Classe para operações de manipulação de texto
+public class ManipulacaoTexto {
+    public String removerEspacos(String texto) {
+        return texto.replace(" ", "");
+    }
+
+    public String[] quebrarEmPalavras(String texto) {
+        return texto.split("\\s+");
+    }
+}
+
+// Classe para operações estatísticas
+public class Estatisticas {
+    public double calcularMedia(double[] numeros) {
+        double soma = 0.0;
+        for (double numero : numeros) {
+            soma += numero;
+        }
+        return soma / numeros.length;
+    }
+
+    public double calcularDesvioPadrao(double[] numeros) {
+        double media = calcularMedia(numeros);
+        double somaDosQuadrados = 0.0;
+        for (double numero : numeros) {
+            somaDosQuadrados += Math.pow(numero - media, 2);
+        }
+        return Math.sqrt(somaDosQuadrados / numeros.length);
+    }
+}
+
+obs: a classe utilitarios foi refatorada para ficar mais coesa,
+depois foi criada as classes de ordenação, manipulação de texto e estatística.
+
+Questão 5.
+
+Questão 6.
+Resolução:
+
+O acoplamento entre classes se refere ao grau de
+ dependência entre classes ou módulos em um sistema. O acoplamento mede o quanto uma 
+ classe conhece ou depende de outras classes. 
+
+
+Questão 7.
+
+Questão 8.
+Resolução
+
+O principio tell, dont ask ajuda a reduzir a dependencia de estado externo,
+promove o encapsulamento, facilita a manutenção e melhora a compreensão e a legibilidade do código.
+
+Questão 9.
+Resolução:
+
+O acoplamento zero faria com que nenhuma classe ou módulodependece de outro,
+fazendo o sistema ficar mais fragmentado o que prejudicaria a necessida de comunicação do código,
+a reutilização, a complexidade do sistema e a manutenção e evolução do sistema.
+
+
+Questão 10.
+
+Questão 11
+
+Questão 12
+
+Questão 13
+
+Questão 14
